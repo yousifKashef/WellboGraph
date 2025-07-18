@@ -1,9 +1,3 @@
-with open('/Users/yousif/PycharmProjects/Wellbo/data/sample_meal_plan.txt', 'r', encoding='utf-8') as file:
-    meal_plan = file.read()
-#%%
-with open('/Users/yousif/PycharmProjects/Wellbo/data/sample_food_preferences.txt', 'r', encoding='utf-8') as file:
-    food_preferences = file.read()
-
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
