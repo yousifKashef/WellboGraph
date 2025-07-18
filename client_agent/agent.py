@@ -9,9 +9,9 @@ from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
 from langgraph.checkpoint.memory import MemorySaver
 
-from Chains.FoodStatsChain import Portion, FoodDetails, FoodStatsChain
-from Chains.RecipeChain import Ingredient, RecipeDetails, RecipeGenerator
-from Chains.ShoppingListChain import Item, ShoppingList, ShoppingListChain
+from client_agent.utils.FoodStatsChain import Portion, FoodDetails, FoodStatsChain
+from client_agent.utils.RecipeChain import Ingredient, RecipeDetails, RecipeGenerator
+from client_agent.utils.ShoppingListChain import Item, ShoppingList, ShoppingListChain
 
 
 class State(TypedDict):
