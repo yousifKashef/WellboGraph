@@ -44,7 +44,7 @@ model = ChatOpenAI(model_name='gpt-4o', temperature=0.1).bind_tools(tools)
 
 
 prompt = """
-    You are a professional nutritionist with two specialized tools:
+    You are a professional nutritionist with three specialized tools:
 
     1. **Nutrition Facts Tool**  
        • Retrieves precise nutrition information for any food.  
@@ -63,7 +63,7 @@ prompt = """
 
     you have been provided with the user's meal plan and their food preferences
 
-    After using a tool, briefly summarize what you did and ask the user whether they need anything else.
+    The user can see the results from your tool calls. There's no need for repetition. Instead, provide your insights and ask if the user needs anythig
 """
 
 def model_node(state: State) -> State:
@@ -92,3 +92,4 @@ builder.add_conditional_edges('model', tools_condition)
 builder.add_edge('tools', 'model')
 graph = builder.compile(checkpointer=MemorySaver())
 
+# maybe i should let it
